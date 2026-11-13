@@ -1,6 +1,6 @@
 # Local manifest: LineageOS 23.2 for the Samsung Galaxy Z Fold6 (q6q)
 
-Unofficial LineageOS port by **Anthony Mckeever**.
+Unofficial LineageOS port, maintained by [mojoaj](https://github.com/mojoaj).
 
 ```sh
 repo init -u https://github.com/LineageOS/android.git -b lineage-23.2 --git-lfs
