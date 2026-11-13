@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 Anthony Mckeever
+     SPDX-License-Identifier: Apache-2.0
+
+     Unofficial LineageOS 23.2 for the Samsung Galaxy Z Fold6 (SM-F956B, q6q).
+     Put this file in .repo/local_manifests/ of a lineage-23.2 checkout, then repo sync.
+-->
+<manifest>
+  <remote name="q6q" fetch="https://github.com/mojoaj" revision="refs/heads/q6q" />
+
+  <!-- LineageOS repos carrying q6q patches (forks, branch q6q) -->
+  <remove-project name="LineageOS/android_frameworks_base" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="q6q" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
+  <remove-project name="LineageOS/android_lineage-sdk" />
+  <project path="lineage-sdk" name="android_lineage-sdk" remote="q6q" />
+  <remove-project path="device/qcom/sepolicy_vndr/sm8650" name="LineageOS/android_device_qcom_sepolicy_vndr" />
+  <project path="device/qcom/sepolicy_vndr/sm8650" name="android_device_qcom_sepolicy_vndr" remote="q6q" groups="qcom,lanai-vendor" />
+
+  <!-- Device -->
+  <project path="device/samsung/q6q" name="android_device_samsung_q6q" remote="q6q" />
+  <project path="vendor/samsung/q6q" name="proprietary_vendor_samsung_q6q" remote="q6q" />
+
+  <!-- Platform (forks of Exynoobs lineage-23.2 sm8650 trees, branch q6q) -->
+  <project path="device/samsung/sm8650-common" name="android_device_samsung_sm8650-common" remote="q6q" />
+  <project path="vendor/samsung/sm8650-common" name="proprietary_vendor_samsung_sm8650-common" remote="q6q" clone-depth="1" />
+  <project path="hardware/samsung" name="android_hardware_samsung" remote="q6q" />
+  <project path="device/samsung_slsi/sepolicy" name="LineageOS/android_device_samsung_slsi_sepolicy" remote="github" />
+
+  <!-- Kernel -->
+  <project path="kernel/samsung/sm8650" name="android_kernel_samsung_sm8650" remote="q6q" clone-depth="1" />
+  <project path="kernel/samsung/sm8650-modules" name="android_kernel_samsung_sm8650-modules" remote="q6q" clone-depth="1" />
+  <project path="kernel/samsung/sm8650-devicetrees" name="android_kernel_samsung_sm8650-devicetrees" remote="q6q" clone-depth="1" />
+</manifest>
