@@ -3,13 +3,13 @@
      SPDX-FileCopyrightText: 2026 Anthony Mckeever
      SPDX-License-Identifier: Apache-2.0
 
-     Unofficial LineageOS 23.2 for the Samsung Galaxy Z Fold6 (SM-F956B, q6q).
-     Put this file in .repo/local_manifests/ of a lineage-23.2 checkout, then repo sync.
+     Unofficial LineageOS 24.0 for the Samsung Galaxy Z Fold6 (SM-F956B, q6q).
+     Put this file in .repo/local_manifests/ of a lineage-24.0 checkout, then repo sync.
 -->
 <manifest>
-  <remote name="q6q" fetch="https://github.com/mojoaj" revision="refs/heads/q6q" />
+  <remote name="q6q" fetch="https://github.com/mojoaj" revision="refs/heads/q6q-24.0" />
 
-  <!-- LineageOS repos carrying q6q patches (forks, branch q6q) -->
+  <!-- LineageOS repos carrying q6q patches (forks, branch q6q-24.0) -->
   <remove-project name="LineageOS/android_frameworks_base" />
   <project path="frameworks/base" name="android_frameworks_base" remote="q6q" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
   <remove-project name="LineageOS/android_lineage-sdk" />
@@ -21,7 +21,7 @@
   <project path="device/samsung/q6q" name="android_device_samsung_q6q" remote="q6q" />
   <project path="vendor/samsung/q6q" name="proprietary_vendor_samsung_q6q" remote="q6q" />
 
-  <!-- Platform (forks of Exynoobs lineage-23.2 sm8650 trees, branch q6q) -->
+  <!-- Platform (forks of Exynoobs lineage-24.0 sm8650 trees, branch q6q-24.0) -->
   <project path="device/samsung/sm8650-common" name="android_device_samsung_sm8650-common" remote="q6q" />
   <project path="vendor/samsung/sm8650-common" name="proprietary_vendor_samsung_sm8650-common" remote="q6q" clone-depth="1" />
   <project path="hardware/samsung" name="android_hardware_samsung" remote="q6q" />
