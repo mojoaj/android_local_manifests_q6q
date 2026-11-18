@@ -13,7 +13,9 @@ m bacon
 ```
 
 The manifest swaps in forks (branch `q6q-24.0`) of the repositories that carry q6q changes:
-frameworks/base, lineage-sdk, device/qcom/sepolicy_vndr/sm8650 (LineageOS) and the
+frameworks/base, lineage-sdk, device/qcom/sepolicy_vndr/sm8650, bootable/recovery,
+packages/apps/Launcher3, packages/inputmethods/LatinIME, packages/modules/ImsMedia,
+hardware/qcom-caf/sm8650/audio/primary-hal (LineageOS) and the
 sm8650 device/vendor/kernel/hardware trees (Exynoobs), plus the q6q device and vendor trees.
 
 LineageOS 23.2 (Android 16) is on branch `q6q`.
